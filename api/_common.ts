@@ -3,7 +3,7 @@
 // It should only be used in server-side code (Vercel Edge Functions).
 
 // Using the direct CDN URL from the importmap in index.html
-const genaiModulePromise = import('https://aistudiocdn.com/@google/genai@^1.16.0');
+const genaiModulePromise = import('https://aistudiocdn.com/@google/genai@0.14.0');
 
 export async function getAiClient() {
     const { GoogleGenAI } = await genaiModulePromise;
