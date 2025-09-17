@@ -2,8 +2,8 @@
 // the module from the CDN. It's designed to work in a package.json-less environment.
 // It should only be used in server-side code (Vercel Edge Functions).
 
-// Using the direct CDN URL from the importmap in index.html
-const genaiModulePromise = import('https://esm.sh/@google/genai@0.14.0');
+// Using a reliable CDN (jsdelivr) to fetch the ES module.
+const genaiModulePromise = import('https://cdn.jsdelivr.net/npm/@google/genai@0.14.0/+esm');
 
 export async function getAiClient() {
     const { GoogleGenAI } = await genaiModulePromise;
