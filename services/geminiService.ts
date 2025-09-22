@@ -29,8 +29,7 @@ export const generateRecipe = async (
   isQuickMeal: boolean
 ): Promise<Recipe> => {
     
-    const recipeSchema = {
-        type: Type.OBJECT,
+    const recipeSchema = {        type: Type.OBJECT,
         properties: {
           recipeName: { type: Type.STRING, description: 'Creative and appealing title for the recipe.' },
           description: { type: Type.STRING, description: 'A brief, enticing description of the dish.' },
